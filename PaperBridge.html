@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Suspension Bridge: Engineering Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .text-main-header { color: #023E8A; }
+        .text-sub-header { color: #0077B6; }
+        .text-accent { color: #00B4D8; }
+        .bg-light-accent { background-color: #CAF0F8; }
+        .border-accent { border-color: #90E0EF; }
+
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #f0f0f0;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: #F8FAFC;
+        }
+        .flow-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0077B6;
+            margin-right: 1.5rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-6xl font-black text-main-header uppercase tracking-wider">The Paper Bridge Challenge</h1>
+            <p class="text-lg md:text-xl text-sub-header mt-4 max-w-3xl mx-auto">Explore the fundamental principles of structural engineering by building a suspension bridge from simple materials.</p>
+        </header>
+
+        <section id="science" class="card">
+            <h2 class="text-3xl font-bold text-main-header mb-6 text-center">The Science of Strength</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">A suspension bridge works by masterfully balancing two key forces: **tension** and **compression**. The weight on the bridge (the load) is transferred through cables under tension to towers, which are then put under compression, directing the force safely to the ground.</p>
+            <div class="w-full max-w-2xl mx-auto p-6 bg-light-accent rounded-lg">
+                <div class="relative text-center">
+                    <p class="font-bold text-sub-header">TENSION ↔ PULLING FORCE</p>
+                    <div class="w-full h-1 bg-sub-header my-2"></div>
+                    <p class="text-xs text-gray-500">The main cables are pulled tight by the load.</p>
+                </div>
+                <div class="relative text-center mt-8">
+                     <p class="font-bold text-sub-header">COMPRESSION ↕ SQUEEZING FORCE</p>
+                    <div class="w-1 h-16 bg-sub-header mx-auto my-2"></div>
+                    <p class="text-xs text-gray-500">The towers are squeezed and push the force downwards.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="workflow" class="card">
+            <h2 class="text-3xl font-bold text-main-header mb-8 text-center">The Maker's Blueprint</h2>
+            <div class="space-y-6">
+                <div class="flow-step border-l-4 border-accent">
+                    <div class="flow-number">1</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-sub-header">Create the Bridge Deck</h3>
+                        <p class="text-gray-600">Fold a sheet of paper accordion-style lengthwise. This corrugation adds significant rigidity and strength.</p>
+                    </div>
+                </div>
+                <div class="flow-step border-l-4 border-accent">
+                    <div class="flow-number">2</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-sub-header">Build the Towers</h3>
+                        <p class="text-gray-600">Roll several sheets of paper into tight, dense tubes to act as the vertical supports for your bridge.</p>
+                    </div>
+                </div>
+                <div class="flow-step border-l-4 border-accent">
+                    <div class="flow-number">3</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-sub-header">Run the Main Cables</h3>
+                        <p class="text-gray-600">Drape two long pieces of string over the towers, allowing them to sag in the middle. Anchor the ends securely.</p>
+                    </div>
+                </div>
+                <div class="flow-step border-l-4 border-accent">
+                    <div class="flow-number">4</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-sub-header">Attach the Hangers</h3>
+                        <p class="text-gray-600">Use shorter strings to connect the deck to the main cables. These hangers transfer the load upwards.</p>
+                    </div>
+                </div>
+                 <div class="flow-step border-l-4 border-accent">
+                    <div class="flow-number">5</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-sub-header">Test & Refine</h3>
+                        <p class="text-gray-600">Place your bridge over a gap and begin adding weights. Observe where it fails and reinforce your design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data" class="card">
+            <h2 class="text-3xl font-bold text-main-header mb-4 text-center">Data-Driven Design</h2>
+            <p class="text-center text-gray-600 mb-8">Engineering is all about optimizing design based on data. Taller towers allow for a deeper, stronger cable curve, significantly increasing the load your bridge can handle. Similarly, stronger materials for the deck make a huge difference.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-sub-header text-center mb-4">Tower Height vs. Strength</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="towerChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                     <h3 class="text-xl font-bold text-sub-header text-center mb-4">Paper Type vs. Strength</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="paperChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tinker" class="card">
+            <h2 class="text-3xl font-bold text-main-header mb-6 text-center">Tinker & Explore More</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-4xl">🌉</p>
+                    <p class="mt-2 font-semibold text-sub-header">Build a Truss Bridge</p>
+                    <p class="text-sm text-gray-600">Compare its strength and design to your suspension bridge.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-4xl">🚧</p>
+                    <p class="mt-2 font-semibold text-sub-header">Add Side Railings</p>
+                    <p class="text-sm text-gray-600">How do railings affect the stability and rigidity of the deck?</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-4xl">🎣</p>
+                    <p class="mt-2 font-semibold text-sub-header">Use Different Cables</p>
+                    <p class="text-sm text-gray-600">Try yarn or fishing line to see how material tension changes performance.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const processLabel = (label) => {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > 16) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        };
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+        };
+
+        const towerCtx = document.getElementById('towerChart').getContext('2d');
+        new Chart(towerCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2 inch', '3 inch', '4 inch'],
+                datasets: [{
+                    label: 'Max Load (in pennies)',
+                    data: [15, 40, 75],
+                    backgroundColor: ['#90E0EF', '#00B4D8', '#0077B6'],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        const paperCtx = document.getElementById('paperChart').getContext('2d');
+        new Chart(paperCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Copy Paper', 'Construction Paper', 'Cardstock'],
+                datasets: [{
+                    label: 'Max Load (in pennies)',
+                    data: [25, 50, 90],
+                    backgroundColor: ['#90E0EF', '#00B4D8', '#0077B6'],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
