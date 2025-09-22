@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Magic of Motion: Build a Zoetrope</title>
+    <title>Digital Fabrication: Cell Phone Costumes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +12,14 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fefcfb;
+            background-color: #f8f9fa;
         }
         .text-dark-blue { color: #073B4C; }
         .text-blue { color: #118AB2; }
         .text-green { color: #06D6A0; }
         .text-yellow { color: #FFD166; }
-        .text-red { color: #FF6B6B; }
-        .bg-dark-blue { background-color: #073B4C; }
-        .bg-blue { background-color: #118AB2; }
-        .bg-green { background-color: #06D6A0; }
+        .text-red { color: #EF476F; }
         .bg-yellow { background-color: #FFD166; }
-        .bg-red { background-color: #FF6B6B; }
 
         .card {
             background-color: white;
@@ -36,45 +32,27 @@
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 550px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             height: 350px;
             max-height: 400px;
         }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        .step-number {
-            background-color: #118AB2;
-            color: #FFFFFF;
-            border-radius: 9999px;
-            width: 3.5rem;
-            height: 3.5rem;
+        .flow-step {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            font-weight: 900;
-            line-height: 1;
-            flex-shrink: 0;
-            border: 4px solid #fefcfb;
-            box-shadow: 0 0 0 4px #118AB2;
+            text-align: left;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: #F8FAFC;
+            border-left: 5px solid #118AB2;
         }
-        .animation-frame {
-            border: 2px dashed #FFD166;
-            padding: 0.5rem;
-            border-radius: 8px;
-            background-color: #fffbeb;
-            text-align: center;
+        .flow-number {
             font-size: 2rem;
-            width: 60px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-weight: 900;
+            color: #118AB2;
+            margin-right: 1.5rem;
+            line-height: 1;
         }
     </style>
 </head>
@@ -83,112 +61,85 @@
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
         <header class="text-center my-8 md:my-12">
-            <h1 class="text-4xl md:text-6xl font-black text-dark-blue uppercase tracking-wider">The Magic of Motion</h1>
-            <p class="text-lg md:text-xl text-blue mt-4 max-w-3xl mx-auto">Build a Zoetrope, an early animation device, and discover the scientific principle of "Persistence of Vision" that tricks your brain into seeing still images come to life!</p>
+            <h1 class="text-4xl md:text-6xl font-black text-dark-blue uppercase tracking-wider">Digital Design, Physical Form</h1>
+            <p class="text-lg md:text-xl text-blue mt-4 max-w-3xl mx-auto">Learn the fundamentals of digital fabrication by designing and creating a custom cardstock costume for your phone with a Cricut Maker.</p>
         </header>
 
-        <section id="science" class="card">
-            <h2 class="text-3xl font-bold text-dark-blue mb-4 text-center">What's Happening? The Science of Sight</h2>
-            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">The zoetrope works because of a principle called **persistence of vision**. Your brain holds onto an image for a fraction of a second after you've seen it. The spinning slits create brief flashes of each drawing, and your brain blends these individual frames together, filling in the gaps to create one smooth, moving image.</p>
-        </section>
-
-        <section id="materials" class="card">
-            <h2 class="text-3xl font-bold text-dark-blue mb-6 text-center">Your Maker Toolkit</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">📦</span><p class="mt-2 font-semibold text-blue">Cardboard</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">⚙️</span><p class="mt-2 font-semibold text-blue">DC Motor</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">🔋</span><p class="mt-2 font-semibold text-blue">Batteries & Holder</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">✂️</span><p class="mt-2 font-semibold text-blue">Cutting Tools</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">🔌</span><p class="mt-2 font-semibold text-blue">Wires & Switch</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">🔥</span><p class="mt-2 font-semibold text-blue">Hot Glue</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">📜</span><p class="mt-2 font-semibold text-blue">Paper Strips</p></div>
-                <div class="p-4 bg-gray-50 rounded-lg"><span class="text-4xl">✏️</span><p class="mt-2 font-semibold text-blue">Drawing Tools</p></div>
+        <section id="concept" class="card">
+            <h2 class="text-3xl font-bold text-dark-blue mb-4 text-center">The Big Idea: From Flat to Form</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This project is all about turning a 2D design into a 3D object. You will design a flat pattern, known as a **net diagram**, which includes precise cuts and fold lines. When assembled, this net transforms into a three-dimensional costume that fits your phone perfectly.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+                <div class="p-4 border-2 border-dashed border-yellow rounded-lg bg-yellow/10">
+                    <p class="text-5xl">📄</p>
+                    <p class="font-bold mt-2">2D Net Diagram</p>
+                </div>
+                <div class="text-4xl font-bold text-yellow mx-4">→</div>
+                <div class="p-4 border-2 border-dashed border-green rounded-lg bg-green/10">
+                    <p class="text-5xl">📦</p>
+                    <p class="font-bold mt-2">3D Costume Form</p>
+                </div>
             </div>
         </section>
         
-        <section id="animation-concept" class="card">
-            <h2 class="text-3xl font-bold text-dark-blue mb-6 text-center">Creating the Illusion of Motion</h2>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Animation is created by showing a sequence of images where each image is slightly different from the last. For a jumping character, you would draw each stage of the jump in a separate frame. When viewed in rapid succession, it looks like a single continuous action.</p>
-            <div class="flex items-center justify-center space-x-2 md:space-x-4 overflow-x-auto pb-4">
-                <div class="animation-frame">🧍</div>
-                <div class="text-2xl text-yellow font-bold">→</div>
-                <div class="animation-frame" style="transform: translateY(-5px);">🧍</div>
-                <div class="text-2xl text-yellow font-bold">→</div>
-                <div class="animation-frame" style="transform: translateY(-15px);">🤸</div>
-                <div class="text-2xl text-yellow font-bold">→</div>
-                <div class="animation-frame" style="transform: translateY(-5px);">🧍</div>
-                 <div class="text-2xl text-yellow font-bold">→</div>
-                <div class="animation-frame">🧍</div>
+        <section id="workflow" class="card">
+            <h2 class="text-3xl font-bold text-dark-blue mb-8 text-center">The Digital Fabrication Workflow</h2>
+            <div class="space-y-6">
+                <div class="flow-step">
+                    <div class="flow-number">1</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-blue">Measure & Sketch</h3>
+                        <p class="text-gray-600">Precisely measure your phone's length, width, and thickness. Sketch a rough net diagram on paper to plan your design.</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">2</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-blue">Digital Design</h3>
+                        <p class="text-gray-600">Recreate your net diagram in Cricut Design Space. Use your exact measurements for the base and sides, and add score lines for folds.</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">3</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-blue">Cut & Score</h3>
+                        <p class="text-gray-600">Load cardstock into the Cricut. The machine will first score the fold lines and then cut the perimeter of your design with high precision.</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">4</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-blue">Assemble & Decorate</h3>
+                        <p class="text-gray-600">Carefully fold along the scored lines and glue the tabs to create the 3D form. Test the fit, then add creative details to bring your character to life.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="build" class="card">
-            <h2 class="text-3xl font-bold text-dark-blue mb-8 text-center">Blueprint for Animation</h2>
-            <div class="space-y-8">
-                <div class="flex items-start space-x-6">
-                    <div class="step-number">1</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue">Construct the Drum</h3>
-                        <p class="text-gray-600 mt-1">Cut a large cardboard circle for the base. Form a long cardboard strip into a cylinder and glue it to the edge of the base to create the drum.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="step-number">2</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue">Cut the Viewing Slits</h3>
-                        <p class="text-gray-600 mt-1">Carefully cut 12-16 evenly spaced, narrow vertical slits around the top edge of the drum. These are essential for the animation effect.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="step-number">3</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue">Assemble the Motorized Base</h3>
-                        <p class="text-gray-600 mt-1">Create a stable stand, mount the DC motor in the center, and wire it to the battery pack and switch. This will power the rotation.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                     <div class="step-number">4</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue">Create Your Animation</h3>
-                        <p class="text-gray-600 mt-1">On a paper strip that fits inside the drum, draw a sequence of images. Each drawing should show a slight progression of movement. Remember to draw them upside down!</p>
-                    </div>
-                </div>
+        <section id="precision" class="card">
+            <h2 class="text-3xl font-bold text-dark-blue mb-4 text-center">Why Precision Matters</h2>
+            <p class="text-center text-gray-600 mb-8">In digital fabrication, accuracy is everything. Even a tiny measurement error of one millimeter can be the difference between a costume that fits perfectly and one that is too loose or too tight. The Cricut's precision ensures your digital design is translated to the physical world accurately.</p>
+            <div class="chart-container">
+                <canvas id="precisionChart"></canvas>
             </div>
         </section>
 
         <section id="tinker" class="card">
-             <h2 class="text-3xl font-bold text-dark-blue mb-4 text-center">Tinkering Tips: Perfecting the Motion</h2>
-             <p class="text-center text-gray-600 mb-8">The quality of your animation is a balance of several factors. The number of viewing slits has a major impact on smoothness, while motor speed and stability are also key. Experiment to see how adjusting each variable changes the final effect.</p>
-             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">⚡️</span>
-                    <p class="font-bold text-blue">Motor Speed</p>
-                    <p class="text-gray-600 text-sm mt-1">A faster rotation can smooth the animation, but too fast can cause blurring.</p>
+            <h2 class="text-3xl font-bold text-dark-blue mb-6 text-center">Tinker & Explore More</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <span class="text-4xl">🔬</span>
+                    <p class="mt-2 font-semibold text-blue">Test Materials</p>
+                    <p class="text-sm text-gray-600">How does thick vs. thin cardstock change the final result?</p>
                 </div>
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">✂️</span>
-                    <p class="font-bold text-blue">Slit Count</p>
-                    <p class="text-gray-600 text-sm mt-1">More slits create a smoother motion but reduce the amount of light for viewing.</p>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <span class="text-4xl">💡</span>
+                    <p class="mt-2 font-semibold text-blue">Add Features</p>
+                    <p class="text-sm text-gray-600">Try cutting holes for LEDs, the camera, or charging ports.</p>
                 </div>
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">📏</span>
-                    <p class="font-bold text-blue">Slit Width</p>
-                    <p class="text-gray-600 text-sm mt-1">The ideal width allows enough light to see each frame without showing the next one.</p>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">✍️</span>
-                    <p class="font-bold text-blue">Image Sharpness</p>
-                    <p class="text-gray-600 text-sm mt-1">Crisper, darker lines make the animation clearer and more defined.</p>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">🔄</span>
-                    <p class="font-bold text-blue">Frame Spacing</p>
-                    <p class="text-gray-600 text-sm mt-1">The distance between your drawings affects the perceived speed of your animation.</p>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                    <span class="text-4xl mb-2">🪨</span>
-                    <p class="font-bold text-blue">Drum Stability</p>
-                    <p class="text-gray-600 text-sm mt-1">A stable, level drum is crucial to avoid a wobbly or jerky animation.</p>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <span class="text-4xl">🧩</span>
+                    <p class="mt-2 font-semibold text-blue">Go Complex</p>
+                    <p class="text-sm text-gray-600">Design a costume with multiple interlocking parts or create a diorama.</p>
                 </div>
             </div>
         </section>
@@ -212,6 +163,58 @@
             if (currentLine) lines.push(currentLine.trim());
             return lines;
         };
+
+        const ctx = document.getElementById('precisionChart').getContext('2d');
+        const precisionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2mm Error', '1mm Error', '0.5mm Error', 'Cricut Precision'],
+                datasets: [{
+                    label: 'Costume Fit Quality (%)',
+                    data: [20, 50, 80, 99],
+                    backgroundColor: [
+                        '#EF476F',
+                        '#FFD166',
+                        '#118AB2',
+                        '#06D6A0'
+                    ],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: {
+                            display: false
+                        }
+                    },
+                     y: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
